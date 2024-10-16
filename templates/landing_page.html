@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrendTailor</title>
+    
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <!-- Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.3/flowbite.min.css" rel="stylesheet" />
+    
+    <!-- External CSS -->
+    <link rel="stylesheet" href="src/styles.css"> <!-- Adjusted link to point to your CSS file -->
+
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="bg-transparent py-2 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-12">
+            <div class="flex space-x-6">
+                <a href="#" class="text-sm text-gray-700 hover:text-gray-900">Shop</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-gray-900">Sale</a>
+                <a href="#" class="text-sm text-gray-700 hover:text-gray-900">About</a>
+            </div>
+            <div class="flex-grow text-center">
+                <a href="#" class="font-bold text-lg text-gray-800">TrendTailor</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <img src="templates/img/philippines-flag_1143296-777.png" alt="Philippines flag" class="h-3 w-5 object-cover">
+                <a href="templates\user_profile.html" class="text-sm text-gray-700 hover:text-gray-900">Sign In</a>
+                <a href="#" class="text-gray-700 hover:text-gray-900">
+                    <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+
+<!-- Main Content -->
+<main class="flex items-center justify-center py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <!-- Flex Container for Text and Carousel -->
+        <div class="flex flex-col md:flex-row items-center justify-between"> 
+            <!-- Text Container -->
+            <div class="text-container mb-2 text-center md:text-left md:mr-4"> 
+                <h1 class="text-6xl sm:text-8xl serif-font font-bold text-gray-900 max-w-4xl z-10 relative"> 
+                    <span class="block md:inline">Craft your style,</span> 
+                    <span class="block md:inline">Stitch your story.</span> 
+                </h1>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div id="custom-controls-gallery" class="relative w-full mb-4 md:w-1/2" data-carousel="slide"> 
+                <!-- Carousel items -->
+                <div class="relative h-48 overflow-hidden rounded-lg md:h-64 flex justify-center items-center"> 
+                    <!-- Item 1 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="templates/img/satin-gray-silk-cloth-wallpaper-preview.jpg" class="h-full w-auto max-w-full object-cover" alt="Brown fabric"> 
+                    </div>
+                    <!-- Item 2 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+                        <img src="templates/img/machine-model-linen-actress-wallpaper-preview.jpg" class="h-full w-auto max-w-full object-cover" alt="Light pink fabric"> 
+                    </div>
+                    <!-- Item 3 -->
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <img src="templates/img/silk-cloth-material-texture-wallpaper-preview.jpg" class="h-full w-auto max-w-full object-cover" alt="Gray fabric"> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-transparent py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div>
+                <h3 class="text-sm font-semibold text-gray-600 uppercase mb-2">Customer Service</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Help Centre</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Payment Methods</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Return & Refund</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Order Tracking</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Exclusive Vouchers</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Free Shipping</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-600 uppercase mb-2">About TrendTailor</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">About Us</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Privacy Policy</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Flash Deals</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Media Contact</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold text-gray-600 uppercase mb-2">Follow Us</h3>
+                <ul class="space-y-1">
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Facebook</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Instagram</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Twitter</a></li>
+                    <li><a href="#" class="text-xs sm:text-sm text-gray-500 hover:text-gray-700">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Flowbite JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.3/flowbite.min.js"></script>
+</body>
+</html>
