@@ -124,8 +124,8 @@
 
                 <!-- Checkout Section -->
                 <div class="flex justify-between items-center mt-6 bg-white rounded-lg p-4">
-                    <button class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition">Check Out</button>
-                    <div class="flex items-center">
+                    <button class="bg-black text-white py-2 px-4 rounded-md hover:bg-gray-800 transition" onclick="checkout()">Check Out</button>
+                <div class="flex items-center">
                         <div class="text-right mr-4">
                             <p class="text-sm text-gray-600">Total Price (Items: 1)</p>
                             <p class="font-semibold text-lg">₱ 282.00</p>
@@ -140,6 +140,50 @@
         </section>
     </div>
 </main>
+
+<script>
+function checkout() {
+    // Change the content of the orders section
+    const ordersSection = document.querySelector('.md\\:w-2\\/3');
+    ordersSection.innerHTML = `
+        <div class="bg-gray-100 rounded-lg shadow p-6">
+            <h3 class="text-xl font-semibold mb-1">My Orders</h3>
+            <p class="text-gray-600 mb-4">Manage your order status</p>
+    
+            <!-- Thread and Needle Boutique Order -->
+            <div class="bg-white rounded-lg p-4 mb-4">
+                <div class="flex justify-between items-center mb-4">
+                    <div class="flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path></svg>
+                        <span class="font-semibold">Thread and Needle Boutique</span>
+                    </div>
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img src="img/woman.png" alt="Product" class="w-24 h-24 object-cover rounded mr-4">
+                        <div>
+                            <div class="flex items-center space-x-4 mb-2">
+                                <span class="font-semibold">Total Price: ₱ 399.00</span>
+                                <span>x 1</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-600">
+                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path></svg>
+                                <span>Parcel Shipped</span>
+                                <span class="ml-2">08/07/24</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    `;
+}
+</script>
     
     <!-- Footer -->
     <?php include 'utilities/footer.html'; ?>
