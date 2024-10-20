@@ -42,7 +42,7 @@
                 <p class="mt-2">Order Placement</p>
             </a>
         </div>
-        <h2 class="text-2xl font-semibold mb-4">Fabric Selection</h2>
+        <h2 class="text-xl font-bold mb-4">Fabric Selection</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
     <div class="bg-gray-200 p-6 rounded-lg shadow-md">
