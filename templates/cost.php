@@ -45,9 +45,9 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Left Column -->
-            <div class="bg-white p-6 rounded-lg custom-shadow">
+            <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="grid grid-cols-2 gap-4">
-                    <img src="img/fabric.png" alt="Fabric" class="w-full h-40 object-cover rounded-lg">
+                    <img src="img/fabric.png" alt="Selected fabric" class="w-full h-40 object-cover rounded-lg">
                     <div class="bg-gray-100 p-4 rounded-lg">
                         <h3 class="font-semibold mb-2 text-sm">Cost Information</h3>
                         <p class="text-sm mb-1">Designer Labor</p>
@@ -78,13 +78,15 @@
                 </div>
                 <button class="bg-black text-white px-4 py-2 rounded w-full mt-4 text-sm">Proceed to Order Placement</button>
                 <!-- Cancel Order Button with Modal Trigger -->
-                <button class="border border-black text-black px-4 py-2 rounded w-full mt-2 text-sm" data-modal-target="cancelModal" data-modal-toggle="cancelModal">
-                    Cancel Order
-                </button>
+                <button class="border border-black text-black px-4 py-2 rounded w-full mt-2 text-sm" id="cancelOrderButton">
+                Cancel Order
+            </button>
+
+                
             </div>
 
             <!-- Right Column -->
-            <div class="bg-white p-6 rounded-lg custom-shadow">
+            <div class="bg-white p-6 rounded-lg shadow-md">
                 <div class="grid grid-cols-2 gap-4 mb-4">
                     <div class="bg-gray-100 p-4 rounded-lg">
                         <h3 class="font-semibold mb-2 text-sm">Delivery Address</h3>
@@ -129,26 +131,63 @@
     </div>
 
     <!-- Cancel Order Modal -->
-    <div id="cancelModal" tabindex="-1" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative w-full max-w-md max-h-full">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" data-modal-hide="cancelModal">
-                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 011.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                    <span class="sr-only">Close modal</span>
+    <div id="cancelModal" tabindex="-1" class="fixed inset-0 z-50 hidden flex items-center justify-center w-full p-4 overflow-x-hidden overflow-y-auto h-full">
+    <div class="relative w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 right-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center" id="closeModalButton">
+                <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-6 text-center">
+                <svg aria-hidden="true" class="mx-auto mb-4 text-gray-400 w-14 h-14 dark:text-gray-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h1m0 4h1v-4h-1m2 4h1v-4h-1m1 8v-4H8v4a2 2 0 11-4 0v-4H2v4a6 6 0 006 6h4a6 6 0 006-6v-4z"></path>
+                </svg>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you sure you want to cancel this order?</h3>
+                <button id="confirmCancelButton" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center mr-2">
+                    Yes, I'm sure
                 </button>
-                <div class="px-6 py-6 lg:px-8">
-                    <h3 class="mb-4 text-xl font-medium text-gray-900 dark:text-white">Are you sure you want to cancel your order?</h3>
-                    <p class="mb-4 text-sm text-gray-600">Once canceled, this action cannot be undone.</p>
-                    <button class="bg-red-600 text-white px-4 py-2 rounded w-full text-sm">Yes, Cancel Order</button>
-                    <button type="button" class="mt-2 border border-gray-300 text-gray-600 px-4 py-2 rounded w-full text-sm" data-modal-hide="cancelModal">No, Keep Order</button>
-                </div>
+                <button type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600" id="closeModalButton2">
+                    No, cancel
+                </button>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Scripts -->
+<!-- Footer -->
+<?php include 'utilities/footer.html'; ?>
+
+<!-- JavaScript for Modal -->
+<script>
+    const cancelOrderButton = document.getElementById('cancelOrderButton');
+    const cancelModal = document.getElementById('cancelModal');
+    const closeModalButton1 = document.getElementById('closeModalButton');
+    const closeModalButton2 = document.getElementById('closeModalButton2');
+
+    // Show the modal
+    cancelOrderButton.addEventListener('click', function () {
+        cancelModal.classList.remove('hidden');
+    });
+
+    // Hide the modal
+    closeModalButton1.addEventListener('click', function () {
+        cancelModal.classList.add('hidden');
+    });
+
+    closeModalButton2.addEventListener('click', function () {
+        cancelModal.classList.add('hidden');
+    });
+
+
+    // Add confirmation behavior here if needed
+    document.getElementById('confirmCancelButton').addEventListener('click', function () {
+        // Add logic to handle order cancellation
+        alert('Order canceled!'); // Example alert
+        cancelModal.classList.add('hidden'); // Close modal after confirmation
+    });
+</script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.3/flowbite.min.js"></script>
 </body>
 </html>
