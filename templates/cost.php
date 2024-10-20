@@ -19,7 +19,7 @@
 
         <!-- Progress Steps -->
         <div class="flex justify-between mb-8">
-            <a href="#browse" class="text-center">
+            <a href="my_account.php" class="text-center">
                 <div class="w-10 h-10 mx-auto bg-gray-300 text-gray-600 rounded-full flex items-center justify-center">1</div>
                 <p class="mt-2">Browse</p>
             </a>
