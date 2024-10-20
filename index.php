@@ -40,15 +40,15 @@
                 <div class="relative h-48 overflow-hidden rounded-lg md:h-64 flex justify-center items-center"> 
                     <!-- Item 1 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="templates/img/satin-gray-silk-cloth-wallpaper-preview.jpg" class="h-full w-auto max-w-full object-cover" alt="Brown fabric"> 
+                        <img src="templates/img/satin-gray-silk-cloth-wallpaper-preview.png" class="h-full w-auto max-w-full object-cover" alt="Brown fabric"> 
                     </div>
                     <!-- Item 2 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-                        <img src="templates/img/machine-model-linen-actress-wallpaper-preview.jpg" class="h-full w-auto max-w-full object-cover" alt="Light pink fabric"> 
+                        <img src="templates/img/machine-model-linen-actress-wallpaper-preview.png" class="h-full w-auto max-w-full object-cover" alt="Light pink fabric"> 
                     </div>
                     <!-- Item 3 -->
                     <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                        <img src="templates/img/silk-cloth-material-texture-wallpaper-preview.jpg" class="h-full w-auto max-w-full object-cover" alt="Gray fabric"> 
+                        <img src="templates/img/silk-cloth-material-texture-wallpaper-preview.png" class="h-full w-auto max-w-full object-cover" alt="Gray fabric"> 
                     </div>
                 </div>
             </div>
