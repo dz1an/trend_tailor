@@ -1,7 +1,7 @@
 <--how to run-->
 download xampp, 
 install xampp, 
-download the file on github, 
+download the zip file on github, (make sure to have winRar installed)
 extract file at C:\xampp\htdocs or where you installed xampp, 
 open xampp, 
 start apache and MYSql, 
