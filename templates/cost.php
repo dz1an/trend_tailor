@@ -155,7 +155,7 @@
         </div>
     </div>
 </div>
-
+</div>
 <!-- Footer -->
 <?php include 'utilities/footer.html'; ?>
 

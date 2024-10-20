@@ -47,7 +47,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <!-- Left Column -->
             <div class="bg-white p-6 rounded-lg shadow-md">
-                <img src="img\fabric.png" alt="Fabric" class="w-full h-48 object-cover rounded-lg mb-4">
+                <img src="img/fabric.png" alt="Selected fabric" class="w-full h-40 object-cover rounded-lg">
                 <div class="bg-gray-100 p-4 rounded-lg mb-4">
                     <h3 class="font-semibold mb-2">Cost Information</h3>
                     <p class="text-sm mb-1">Designer Labor</p>
@@ -122,11 +122,12 @@
         </div>
 
 
+        </div>
 
-
-
+        </div>
     <!-- Footer -->
     <?php include 'utilities/footer.html'; ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.5.3/flowbite.min.js"></script>
+
 </body>
 </html>
