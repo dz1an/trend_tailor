@@ -96,7 +96,7 @@
 
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <a href="preview.php">
+                            <a href="{{route('Client.Templates.preview')}}">
                                 <img src="{{ asset('template/img/clothes.png') }}" alt="Customized Product" class="w-40 h-24 object-cover rounded mr-4">
                             </a>
                             <div>

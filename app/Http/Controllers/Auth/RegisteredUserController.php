@@ -66,7 +66,7 @@ class RegisteredUserController extends Controller
             //  dd($user);
              $user->save();
              
-             return redirect('/login')->with('message', 'Registered successfully');
+             return redirect('/homepage-sigin')->with('message', 'Registered successfully');
          } catch(\Exception $ex) {
              dd($ex);
              return redirect('/register')->with('message', 'Something went wrong');
