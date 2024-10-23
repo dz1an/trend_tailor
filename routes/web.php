@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\HomepageController;
 use Illuminate\Support\Facades\Route;
@@ -20,6 +21,19 @@ use Illuminate\Support\Facades\Route;
 // });
 Route::get('/homepage-sigin',[HomepageController::class,'SigInPage'])->name('Homepage.signin');
 Route::get('/',[HomepageController::class,'Homepage'])->name('Homepage.landingpage');
+
+// client page
+Route::get('/client-myaccount',[ClientController::class,'Myaccount'])->name('Client.Templates.my_account');
+Route::get('/client-Address',[ClientController::class,'Address'])->name('Client.Templates.adress');
+Route::get('/client-bag',[ClientController::class,'Bag'])->name('Client.Templates.bag');
+Route::get('/client-cost',[ClientController::class,'cost'])->name('Client.Templates.cost');
+Route::get('/client-customization',[ClientController::class,'customization'])->name('Client.Templates.customization');
+Route::get('/client-order-placement',[ClientController::class,'Orderplacement'])->name('Client.Templates.order_placement');
+Route::get('/client-preview',[ClientController::class,'preview'])->name('Client.Templates.preview');
+
+
+
+
 
 
 Route::get('/dashboard', function () {

@@ -17,7 +17,7 @@
 
 <!-- Main Content -->
 <main class="flex-grow flex items-center justify-center bg-gray-200 bg-opacity-50"
-      style="background-image: url('img/login.png'); background-size: cover; background-position: center;">
+      style="background-image: url('template/img/login.png'); background-size: cover; background-position: center;">
     <div class="max-w-4xl mx-auto px-4 text-center py-32 relative">
         <!-- Gradient overlay for better readability -->
         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-50"></div>
@@ -61,7 +61,7 @@
                         <input type="password" name="password" id="password" class="bg-gray-100 border border-gray-300 text-gray-900 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Password" required>
                     </div>
                     <div class="flex justify-between">
-                        <a href="{{ route('password.request') }}" class="text-sm text-blue-700 hover:underline">Forgot Password?</a>
+                        <a href="#" class="text-sm text-blue-700 hover:underline">Forgot Password?</a>
                     </div>
                     <button type="submit" class="w-full text-white bg-gray-800 hover:bg-gray-600 focus:ring-4 focus:outline-none focus:ring-gray-400 font-medium rounded-full text-sm px-5 py-2.5 text-center">Sign In</button>
                     <div class="text-sm font-medium text-gray-500">

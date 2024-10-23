@@ -35,7 +35,7 @@ class AuthenticatedSessionController extends Controller
 
  // Redirect to the intended page based on user role
  $url = match($request->user()->role) {
-     'client' => '/dashboard',  // Redirect to the client dashboard
+     'client' => '/client-myaccount',  // Redirect to the client dashboard
      'designer' => 'designer/dashboard', // Redirect to the designer dashboard
      default => '/'  // Fallback for any role not explicitly handled
  };
