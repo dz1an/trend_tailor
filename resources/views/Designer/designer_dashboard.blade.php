@@ -23,7 +23,7 @@
 
             <!-- Sidebar -->
             {{-- @include('Client.body.sidebar') --}}
-
+            @include('Designer.sidebar')
             <!-- Profile Form -->
             
             <section class="w-full md:w-2/3">
