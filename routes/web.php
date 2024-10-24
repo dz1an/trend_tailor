@@ -31,7 +31,8 @@ Route::get('/client-customization',[ClientController::class,'customization'])->n
 Route::get('/client-order-placement',[ClientController::class,'Orderplacement'])->name('Client.Templates.order_placement');
 Route::get('/client-preview',[ClientController::class,'preview'])->name('Client.Templates.preview');
 
-
+// client page
+Route::get('/designer/dashboard',[ClientController::class,'designer'])->name('Designer.designer_Dashboard');
 
 
 

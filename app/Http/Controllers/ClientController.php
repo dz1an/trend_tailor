@@ -37,4 +37,8 @@ class ClientController extends Controller
   public function preview(){
     return view('Client.Templates.preview');
 }
+  // preview page
+  public function designer(){
+    return view('Designer.designer_Dashboard');
+}
 }
